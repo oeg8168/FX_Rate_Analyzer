@@ -13,6 +13,7 @@ getFXData <- function() {
                           read.csv(
                               file = x,
                               header = TRUE,
+                              na.strings = c("-", "0"),
                               stringsAsFactors = FALSE
                           )
                       })
