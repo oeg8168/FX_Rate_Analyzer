@@ -6,9 +6,9 @@
 #' @examples
 #' fx_data <- getFXData()
 getFXData <- function() {
-    filenames = list.files("./FX_Rate_Data/", full.names = TRUE)
+    filenames <- list.files("./FX_Rate_Data/", full.names = TRUE)
 
-    datalist = lapply(filenames,
+    datalist <- lapply(filenames,
                       function(x) {
                           read.csv(
                               file = x,
