@@ -14,6 +14,10 @@ colnames(fx_data) <- convertCurrencyNames(colnames(fx_data))
 # Convert type of "Date" column from character to Date
 fx_data$Date <- as.Date(fx_data$Date)
 
+# Invert currencies
+invert_columns <- c("EUR.USD", "GBP.USD", "AUD.USD", "NZD.USD")
+fx_data <- invertCurrency(fx_data, invert_columns)
+
 # Get line plot using ggplot2
 p1 <- getLinePlot(fx_data)
 show(p1)
